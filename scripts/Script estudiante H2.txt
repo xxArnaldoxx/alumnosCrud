@@ -1,0 +1,24 @@
+-- Creación de la tabla estudiante
+-- (No es necesario ejecutarla)
+CREATE TABLE estudiante (
+    id INTEGER AUTO_INCREMENT PRIMARY KEY, -- Llave primaria auto-incremental
+    nombre VARCHAR(40) NOT NULL,            -- Nombre, campo no nulo
+    apellido VARCHAR(40) NOT NULL,          -- Apellido, campo no nulo
+    email VARCHAR(40) NOT NULL UNIQUE,      -- Email, campo no nulo y único
+    creditos INTEGER NOT NULL,              -- Créditos, campo no nulo
+    semestre INTEGER NOT NULL,              -- Semestre, campo no nulo
+    promedio INTEGER NOT NULL               -- Promedio, campo no nulo
+);
+
+-- Insertar 10 registros de ejemplo en la tabla estudiante
+INSERT INTO estudiante (nombre, apellido, email, creditos, semestre, promedio) VALUES 
+('Juan', 'Pérez', 'juan.perez@mail.com', 25, 5, 80),
+('Ana', 'Martínez', 'ana.martinez@mail.com', 30, 6, 85),
+('Luis', 'Gómez', 'luis.gomez@mail.com', 22, 4, 78),
+('María', 'López', 'maria.lopez@mail.com', 35, 7, 90),
+('Carlos', 'Sánchez', 'carlos.sanchez@mail.com', 18, 3, 70),
+('Elena', 'Fernández', 'elena.fernandez@mail.com', 28, 5, 88),
+('Pedro', 'Ramírez', 'pedro.ramirez@mail.com', 24, 4, 82),
+('Laura', 'Díaz', 'laura.diaz@mail.com', 32, 6, 87),
+('Jorge', 'Torres', 'jorge.torres@mail.com', 20, 3, 75),
+('Sofía', 'Vega', 'sofia.vega@mail.com', 26, 5, 89);
